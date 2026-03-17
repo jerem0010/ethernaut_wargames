@@ -24,7 +24,6 @@ contract SolveTelephone is Script {
 
         console.log("Le msg.sender est :", address(attacker));
         console.log("Le tx.origin est : ", vm.addr(privateKey));
-        // console.log("le hash est ", keccak256(abi.encode(" lunch and Dinner ")));
 
         vm.stopBroadcast();
     }

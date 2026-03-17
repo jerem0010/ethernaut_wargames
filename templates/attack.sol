@@ -10,7 +10,7 @@ contract NameAttack { // 2) change nameattck
     constructor() {
 
     }
-    function attack() public {
+    function attack() external {
 
     }
 }
