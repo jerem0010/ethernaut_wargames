@@ -13,9 +13,10 @@ contract Deploy is Script {
 
     function run() external {
 
-        address det = vm.envAddress("0x34bD06F195756635a10A7018568E033bC15F3FB5");
+        address det = 0x8bB1EE0A5067D779659663CBccc6Cc88c7b4562c;
+        uint256 privateKey = vm.envUint("PRIVATE_KEY");
 
-        vm.startBroadcast();
+        vm.startBroadcast(privateKey);
 
         // récupérer les contrats
         IDoubleEntryPoint instance = IDoubleEntryPoint(det);
