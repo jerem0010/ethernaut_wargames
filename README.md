@@ -1,66 +1,64 @@
-## Foundry
+🧠 Ethernaut Wargames Solutions
 
-**Foundry is a blazing fast, portable and modular toolkit for Ethereum application development written in Rust.**
+This repository contains my solutions to the Ethernaut wargame, a Web3/Solidity security challenge platform focused on smart contract vulnerabilities.
 
-Foundry consists of:
+👉 Each level is solved using:
 
-- **Forge**: Ethereum testing framework (like Truffle, Hardhat and DappTools).
-- **Cast**: Swiss army knife for interacting with EVM smart contracts, sending transactions and getting chain data.
-- **Anvil**: Local Ethereum node, akin to Ganache, Hardhat Network.
-- **Chisel**: Fast, utilitarian, and verbose solidity REPL.
+Custom exploit contracts (src/)
+Foundry scripts for execution (script/)
+A security-focused approach (understanding the vulnerability, exploiting it, and thinking about mitigations)
+🎯 Objective
 
-## Documentation
+The goal of this repository is to:
 
-https://book.getfoundry.sh/
+Develop a deep understanding of common smart contract vulnerabilities
+Practice offensive security (thinking like an attacker)
+Build a strong foundation for smart contract auditing
+🛠️ Tech Stack
+Foundry (Forge, Cast, Anvil)
+Solidity
+EVM internals
+Testing & scripting via Forge
+📂 Repository Structure
+.
+├── src/        # Exploit contracts (Attack contracts)
+├── script/     # Scripts used to execute attacks
+├── test/       # (Optional) tests
+├── lib/        # Dependencies
+├── foundry.toml
+🚀 How to Run
+Build
+forge build
+Test
+forge test
+Run a Script
+forge script script/SolveFallback.s.sol --rpc-url <RPC_URL> --private-key <PRIVATE_KEY> --broadcast
+🔐 Covered Vulnerabilities
 
-## Usage
+This repository includes exploits for multiple classes of vulnerabilities:
 
-### Build
+Reentrancy
+Access control issues
+Storage manipulation
+Delegatecall abuse
+Integer issues / logic flaws
+Denial of service
+Oracle / randomness weaknesses
+Proxy & upgrade patterns
+📘 Example Levels
 
-```shell
-$ forge build
-```
+Each level includes:
 
-### Test
+Attack contract
+Exploit script
+Understanding of the vulnerability
 
-```shell
-$ forge test
-```
+Examples:
 
-### Format
-
-```shell
-$ forge fmt
-```
-
-### Gas Snapshots
-
-```shell
-$ forge snapshot
-```
-
-### Anvil
-
-```shell
-$ anvil
-```
-
-### Deploy
-
-```shell
-$ forge script script/Counter.s.sol:CounterScript --rpc-url <your_rpc_url> --private-key <your_private_key>
-```
-
-### Cast
-
-```shell
-$ cast <subcommand>
-```
-
-### Help
-
-```shell
-$ forge --help
-$ anvil --help
-$ cast --help
-```
+Fallback → ownership takeover via fallback misuse
+CoinFlip → predictable randomness
+Delegation → delegatecall exploit
+Reentrance → reentrancy attack
+Gatekeeper series → low-level EVM constraints
+Dex / DexTwo → flawed AMM logic
+DoubleEntryPoint → detection bypass
