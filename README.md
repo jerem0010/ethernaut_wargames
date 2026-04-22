@@ -124,7 +124,3 @@ For each challenge, I follow this approach:
 
 This repository is for **educational purposes only**.
 All exploits are performed in controlled environments.
-
----
-
-🔥 If you're a recruiter or security researcher, feel free to reach out.
