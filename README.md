@@ -111,15 +111,6 @@ For each challenge, I follow this approach:
 
 ---
 
-## 🧠 What I Learned
-
-* How subtle smart contract bugs can be exploited
-* Importance of invariants and state transitions
-* How attackers chain multiple interactions
-* Writing exploits is the best way to understand security
-
----
-
 ## ⚠️ Disclaimer
 
 This repository is for **educational purposes only**.
